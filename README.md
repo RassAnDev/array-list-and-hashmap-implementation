@@ -1,4 +1,4 @@
-# Custom ArrayList and HashMap realization
+# Custom ArrayList and HashMap implementation
 
 ### Homework #1
 
