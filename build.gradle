@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'checkstyle'
+    id 'com.adarshr.test-logger' version '3.2.0'
+}
+
+group = 'org.arraylistandhashmap'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.assertj:assertj-core:3.24.2'
+}
+
+compileJava {
+    options.release = 20
+    options.encoding = 'UTF-8'
+}
+
+checkstyle {
+    toolVersion '10.12.1'
+}
+
+test {
+    useJUnitPlatform()
+}
